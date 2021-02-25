@@ -29,13 +29,14 @@
 .input {
   border: none;
   background: none;
-  border-bottom: 1px solid white;
+  border: 1px solid rgb(202, 200, 200);
   width: 100%;
   padding: 5px;
   margin-bottom: 10px;
   border-radius: 2px;
   outline: none;
   color: white;
+  padding: 10px;
 }
 
 input::placeholder {

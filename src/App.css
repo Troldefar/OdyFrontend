@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
 /* Global */
 
 * {
@@ -5,10 +7,11 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
+  font-family: 'DotGothic16', sans-serif;
 }
 
 body, html {
-  background: rgb(56, 86, 116);
+  background: rgb(29, 29, 29);
 }
 
 .center-form {
@@ -40,6 +43,7 @@ body, html {
   justify-content: center;
   align-items: center;
   background: #09428d;
+  padding: 20px;
 }
 
 .form-image {
