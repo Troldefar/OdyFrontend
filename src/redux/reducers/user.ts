@@ -13,8 +13,6 @@ export default function user(state = initialState, action: any) {
         user: {}
       }
     default:
-      return {
-        ...state
-      }
+      return state;
   }
 }
