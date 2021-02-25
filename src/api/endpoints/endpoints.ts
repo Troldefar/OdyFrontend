@@ -1,1 +1,5 @@
-console.log(123);
+const getStuff = () => {
+
+}
+
+export default getStuff;
