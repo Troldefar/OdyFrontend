@@ -1,0 +1,43 @@
+/* Button */
+
+.btn {
+  border-radius: 2px;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover {
+  background: rgb(70, 113, 179);
+  color: white;
+}
+
+.btn-success {
+  background: rgb(114, 207, 114);
+}
+
+.btn-danger {
+  background: rgb(202, 81, 81);
+}
+
+/* Input */
+
+.input {
+  border: none;
+  background: none;
+  border-bottom: 1px solid white;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  outline: none;
+  color: white;
+}
+
+input::placeholder {
+  color: white;
+}
