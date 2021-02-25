@@ -1,4 +1,4 @@
-const validateInput = (string: String): Boolean => {
+const validateInput = (string: string): boolean => {
   if(!string) {
     return false;
   } else {

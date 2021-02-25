@@ -1,6 +1,6 @@
 
 
-const validateLogin = (username: String, password: String): void => {
+const validateLogin = (username: string, password: string): void => {
   try {
 
   } catch(e) {

@@ -1,6 +1,6 @@
 export interface User {
-  email: String,
-  token: String
+  email: string,
+  token: string
 }
 
 export interface Group {
@@ -8,7 +8,11 @@ export interface Group {
 }
 
 export interface SystemState {
-  loggedIn: Boolean,
-  session: String,
-  userName: String
+  loggedIn: boolean,
+  session: string,
+  userName: string
+}
+
+export interface RequestHeader {
+  headers: Object
 }
