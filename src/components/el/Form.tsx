@@ -3,21 +3,13 @@ import { useState } from 'react';
 import InputElement from './Input';
 import Button from './Button';
 
+import OnSubmit from '../utils/ts/functions/OnFormSubmit';
+
 export default function Form(props: any) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   // Identify which form
   const formRole = props.identifier;
-
-  const onsubmit = async (e: any) => {
-    e.preventDefault();
-    // Check credentials
-    try {
-      await 'login';
-    } catch (e) {
-
-    }
-  }
 
   return (
     <div className="center-form">
@@ -31,7 +23,7 @@ export default function Form(props: any) {
           <form
             method="post"
             className="login-form"
-            onSubmit={onsubmit}
+            onSubmit={OnSubmit}
           >
             <InputElement 
               inputType="text"

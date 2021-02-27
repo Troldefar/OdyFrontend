@@ -7,10 +7,10 @@ const initialState = {
 export default function guild(state = initialState, action: any) {
   switch (action.type) {
     case GET:
-      console.log("GET");
+      console.log("Updating guidl");
       return {
         ...state,
-        user: {}
+        group: action.payload
       }
     default:
       return state;

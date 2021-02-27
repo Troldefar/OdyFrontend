@@ -5,9 +5,10 @@ const initialState = {
 };
 
 export default function user(state = initialState, action: any) {
-  switch (action.type) {
+  switch (action.type) {  
     case LOGIN:
       console.log("login");
+      console.log(action);
       return {
         ...state,
         user: {}

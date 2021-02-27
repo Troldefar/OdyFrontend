@@ -25,7 +25,7 @@ body, html {
 
 .form-card {
   display: flex;
-  width: 40%;
+  width: 70%;
   height: 50%;
   box-shadow: 2px 2px 2px rgb(0, 0, 0);
   position: relative;
@@ -43,7 +43,6 @@ body, html {
   justify-content: center;
   align-items: center;
   background: #09428d;
-  padding: 20px;
 }
 
 .form-image {

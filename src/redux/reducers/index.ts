@@ -1,5 +1,10 @@
+// Combine
 import { combineReducers } from "redux";
-import user from "./user";
-import group from "./group";
 
-export default combineReducers({ user, group });
+// Reducers
+import user from './user';
+import group from './group';
+import guild from './guild';
+
+// Export
+export default combineReducers({ user, group, guild });
