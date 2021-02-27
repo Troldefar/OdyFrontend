@@ -1,6 +1,6 @@
 import { LOGIN } from "../actionTypes/actionTypes";
 
-export const login = () => ({
+export const login = (): Object => ({
   type: LOGIN,
   payload: {
     test: 123

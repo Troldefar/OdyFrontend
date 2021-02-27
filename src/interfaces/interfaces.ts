@@ -16,3 +16,8 @@ export interface SystemState {
 export interface RequestHeader {
   headers: Object
 }
+
+export interface Action {
+  type: string,
+  payload: Object
+}
