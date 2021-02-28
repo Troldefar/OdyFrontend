@@ -17,7 +17,7 @@ export interface RequestHeader {
   headers: Object
 }
 
-export interface Action {
+export interface ReduxAction {
   type: string,
   payload: Object
 }

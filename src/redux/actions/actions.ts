@@ -1,7 +1,7 @@
 import { LOGIN } from "../actionTypes/actionTypes";
-import { Action } from '../../interfaces/interfaces';
+import { ReduxAction } from '../../interfaces/interfaces';
 
-export const login = (): Action => ({
+export const login = (): ReduxAction => ({
   type: LOGIN,
   payload: {
     test: 123
