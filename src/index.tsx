@@ -12,9 +12,12 @@ import './components/utils/css/util.css';
 import './components/utils/css/keyframes.css';
 import './components/utils/css/mq.css';
 
+import Navbar from './components/layout/menu/Navbar';
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
+      <Navbar />
       <App />
     </Provider>
   </React.StrictMode>,

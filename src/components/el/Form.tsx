@@ -11,6 +11,16 @@ export default function Form(props: any) {
   // Identify which form
   const formRole = props.identifier;
 
+  function login(e: any): void {
+    e.preventDefault();
+    fetch('http://127.0.0.1:8000/api/auth/login', {
+      method: 'POST',
+      body: JSON.stringify({username, password})
+    })
+      .then(response => console.log(response))
+      .catch((error: any) => console.log(error));
+  }
+
   return (
     <div className="center-form">
       <div className="form-card">
@@ -23,18 +33,19 @@ export default function Form(props: any) {
           <form
             method="post"
             className="login-form"
-            onSubmit={OnSubmit}
+            encType="multipart/form-data"
+            onSubmit={login}
           >
-            <InputElement 
-              inputType="text"
-              ph="Email"
+            <input 
               name="email"
+              className="input"
               onChange={(e:any) => setUsername(e.target.value)}
             />
-            <InputElement 
-              inputType="password"
-              ph="Password"
+            <input 
               name="password"
+              className="input"
+              type="password"
+              onChange={(e:any) => setPassword(e.target.value)}
             />
             <Button
               text="Login"
