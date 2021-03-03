@@ -6,16 +6,20 @@ import Button from './Button';
 import OnSubmit from '../utils/ts/functions/OnFormSubmit';
 
 export default function Form(props: any) {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   // Identify which form
   const formRole = props.identifier;
 
   function login(e: any): void {
     e.preventDefault();
+    console.log(JSON.stringify({email, password}))
     fetch('http://127.0.0.1:8000/api/auth/login', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
       method: 'POST',
-      body: JSON.stringify({username, password})
+      body: JSON.stringify({email, password})
     })
       .then(response => console.log(response))
       .catch((error: any) => console.log(error));
@@ -39,7 +43,7 @@ export default function Form(props: any) {
             <input 
               name="email"
               className="input"
-              onChange={(e:any) => setUsername(e.target.value)}
+              onChange={(e:any) => setEmail(e.target.value)}
             />
             <input 
               name="password"
