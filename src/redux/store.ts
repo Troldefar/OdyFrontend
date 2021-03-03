@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from './user'
+import userReducer from './user';
+import groupReducer from './group';
+import guildReducer from './guild';
 
 export default configureStore({
   reducer: {
-    counter: counterReducer
+    user: userReducer,
+    group: groupReducer,
+    guild: guildReducer
   }
-})
+});
