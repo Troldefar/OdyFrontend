@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { Provider, useSelector } from 'react-redux';
+import { Provider } from 'react-redux';
 import store from "./redux/store";
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
@@ -15,6 +15,7 @@ import './components/utils/css/keyframes.css';
 import './components/utils/css/mq.css';
 
 import { PropsInterface } from './interfaces/interfaces';
+import CheckAuthContext from './hooks/CheckAuthContext';
 
 import Navbar from './components/layout/menu/Navbar';
 import LoggedInMenu from './components/layout/menu/LoggedInMenu';
@@ -48,10 +49,11 @@ ReactDOM.render(
 );
 
 function AuthRoute({component: Component, ...rest}: any) {
+  const user = CheckAuthContext();
   return (
     <Route
       { ...rest }
-      render={props => 123 ? (
+      render={props => user ? (
         <Component {...props} />
       ) : (
         <Redirect
