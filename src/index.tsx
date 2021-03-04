@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
@@ -48,7 +48,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-function AuthRoute({component: Component, ...rest}: any) {
+function AuthRoute<Component>({component: Component, ...rest}: any) {
   const user = CheckAuthContext();
   return (
     <Route
