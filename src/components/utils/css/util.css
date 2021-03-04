@@ -24,6 +24,16 @@
   background: rgb(202, 81, 81);
 }
 
+.small-btn {
+  border-radius: 2px;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
 /* Input */
 
 .input {

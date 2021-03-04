@@ -1,28 +1,23 @@
-import { useSelector, RootStateOrAny } from 'react-redux';
-import { useState, useEffect } from 'react';
-
-import Button from '../../el/Button';
+import { useSelector } from 'react-redux';
 
 export default function Navbar() {
-  const [loggedUser, setLoggedUser] = useState({});
-  const user = useSelector((state: RootStateOrAny) => state.user.value);
-  console.log("updated navbar component");
-  console.log("USER: ", user);
-  if(user) {
-    setLoggedUser(user);
-    console.log("user present", user);
+  const { user }:any = useSelector<any>((state) => state.user);
+  let div;
+  if(user.user) {
+    return (
+      <div className="navBar">
+        { user.user ?
+            <button className="small-btn">
+              { user.user.email }
+            </button>
+            :
+            ''
+        }
+      </div>
+    )
   } else {
-    console.log("no user present", user);
+    return (
+      <></>
+    )
   }
-  useEffect(() => {
-    console.log(loggedUser);
-  }, [loggedUser]);
-  return (
-    <div>
-      { user ? 
-        { loggedUser }
-        : ''
-      }
-    </div>
-  )
 }

@@ -86,3 +86,12 @@ body, html {
   animation-fill-mode: forwards;
   display: none;
 }
+
+/********************** Navigation bar **********************/
+
+.navBar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+}
