@@ -52,3 +52,13 @@
 input::placeholder {
   color: white;
 }
+
+/* Alert */
+
+.alert {
+  width: 100%;
+  background: crimson;
+  padding: 5px;
+  border-radius: 2px;
+  margin-top: 30px;
+}

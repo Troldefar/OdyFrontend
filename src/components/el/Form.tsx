@@ -1,16 +1,14 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 import Button from './Button';
 
 import { login } from '../../redux/user';
-import CheckAuthContext from '../../hooks/CheckAuthContext';
 
 export default function Form(props: any) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const user = CheckAuthContext();
   let history = useHistory();
   // dispatch
   const dispatch = useDispatch();
@@ -66,9 +64,6 @@ export default function Form(props: any) {
               text="Login"
             />
           </form>
-          <span>
-            { user ? 'user' : 'no user' }
-          </span>
         </div>
       </div>
     </div>

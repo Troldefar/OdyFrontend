@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
@@ -14,11 +14,7 @@ import './components/utils/css/util.css';
 import './components/utils/css/keyframes.css';
 import './components/utils/css/mq.css';
 
-import { PropsInterface } from './interfaces/interfaces';
 import CheckAuthContext from './hooks/CheckAuthContext';
-
-import Navbar from './components/layout/menu/Navbar';
-import LoggedInMenu from './components/layout/menu/LoggedInMenu';
 import Notification from './components/el/Notification';
 
 import Dashboard from './components/layout/dashboard/Dashboard';
@@ -48,7 +44,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-function AuthRoute<Component>({component: Component, ...rest}: any) {
+function AuthRoute({component: Component, ...rest}: any) {
   const user = CheckAuthContext();
   return (
     <Route
