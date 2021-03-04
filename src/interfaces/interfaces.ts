@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface User {
   email: string,
   token: string
@@ -20,4 +22,8 @@ export interface RequestHeader {
 export interface ReduxAction {
   type: string,
   payload: Object
+}
+
+export interface PropsInterface {
+  component: React.FC<any>;
 }

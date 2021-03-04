@@ -4,17 +4,20 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { Provider } from 'react-redux';
+import { Provider, useSelector } from 'react-redux';
 import store from "./redux/store";
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 import './App.css';
 import './components/utils/css/util.css';
 import './components/utils/css/keyframes.css';
 import './components/utils/css/mq.css';
 
+import { PropsInterface } from './interfaces/interfaces';
+
 import Navbar from './components/layout/menu/Navbar';
+import LoggedInMenu from './components/layout/menu/LoggedInMenu';
 import Notification from './components/el/Notification';
 
 import Dashboard from './components/layout/dashboard/Dashboard';
@@ -28,15 +31,14 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Provider store={store}>
-        <Navbar />
         <Notification />
         <Switch>
-          <Route exact path="/dashboard" component={ Dashboard } />
-          <Route exact path="/friends" component={ Friends } />
-          <Route exact path="/game" component={ Game } />
-          <Route exact path="/profile" component={ Profile } />
-          <Route exact path="/search" component={ Search } />
-          <Route exact path="/statistics" component={ Statistics } />
+          <AuthRoute exact path="/dashboard" component={ Dashboard } />
+          <AuthRoute exact path="/friends" component={ Friends } />
+          <AuthRoute exact path="/game" component={ Game } />
+          <AuthRoute exact path="/profile" component={ Profile } />
+          <AuthRoute exact path="/search" component={ Search } />
+          <AuthRoute exact path="/statistics" component={ Statistics } />
           <Route exact path="/" component={ App } />
         </Switch>
       </Provider>
@@ -44,5 +46,22 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+function AuthRoute({component: Component, ...rest}: any) {
+  return (
+    <Route
+      { ...rest }
+      render={props => 123 ? (
+        <Component {...props} />
+      ) : (
+        <Redirect
+          to={{
+            pathname: '/'
+          }}
+        />
+      )}
+    />
+  )
+}
 
 reportWebVitals();
