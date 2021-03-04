@@ -1,4 +1,4 @@
-export default function Dashboard() {
+export default function Game() {
   return (
     <div>
       
