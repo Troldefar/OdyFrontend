@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export const counterSlice = createSlice({
+export const groupSlicer = createSlice({
   name: 'group',
   initialState: {
     group: {}
@@ -25,6 +25,6 @@ export const counterSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { initiate, invite, remove, update} = counterSlice.actions
+export const { initiate, invite, remove, update} = groupSlicer.actions
 
-export default counterSlice.reducer
+export default groupSlicer.reducer

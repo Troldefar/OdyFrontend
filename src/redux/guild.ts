@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export const counterSlice = createSlice({
+export const guildSlicer = createSlice({
   name: 'guild',
   initialState: {
     guild: {}
@@ -25,6 +25,6 @@ export const counterSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { initiate, invite, remove, update} = counterSlice.actions
+export const { initiate, invite, remove, update} = guildSlicer.actions
 
-export default counterSlice.reducer
+export default guildSlicer.reducer

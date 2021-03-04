@@ -13,11 +13,13 @@ import './components/utils/css/keyframes.css';
 import './components/utils/css/mq.css';
 
 import Navbar from './components/layout/menu/Navbar';
+import Notification from './components/el/Notification';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Navbar />
+      <Notification />
       <App />
     </Provider>
   </React.StrictMode>,

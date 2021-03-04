@@ -1,6 +1,6 @@
 import { RequestHeader } from '../../interfaces/interfaces';
 
-const Headers = (token: string): RequestHeader => {
+const BearerToken = (token: string): RequestHeader => {
   return {
     headers: {
       Authentication: 'Bearer ' + token
@@ -8,4 +8,4 @@ const Headers = (token: string): RequestHeader => {
   }
 }
 
-export default Headers;
+export default BearerToken;

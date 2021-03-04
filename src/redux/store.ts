@@ -10,3 +10,5 @@ export default configureStore({
     guild: guildReducer
   }
 });
+
+export type Rootstate = ReturnType<typeof configureStore>
