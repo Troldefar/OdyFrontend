@@ -31,27 +31,13 @@ ReactDOM.render(
         <Navbar />
         <Notification />
         <Switch>
-          <Route exact path="/dashboard">
-            <Dashboard />
-          </Route>
-          <Route exact path="/friends">
-            <Friends />
-          </Route>
-          <Route exact path="/game">
-            <Game />
-          </Route>
-          <Route exact path="/profile">
-            <Profile />
-          </Route>
-          <Route exact path="/search">
-            <Search />
-          </Route>
-          <Route exact path="/statistics">
-            <Statistics />
-          </Route>
-          <Route exact path="/">
-            <App />
-          </Route>
+          <Route exact path="/dashboard" component={ Dashboard } />
+          <Route exact path="/friends" component={ Friends } />
+          <Route exact path="/game" component={ Game } />
+          <Route exact path="/profile" component={ Profile } />
+          <Route exact path="/search" component={ Search } />
+          <Route exact path="/statistics" component={ Statistics } />
+          <Route exact path="/" component={ App } />
         </Switch>
       </Provider>
     </Router>
