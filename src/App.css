@@ -167,6 +167,7 @@ html {
 
 .dashboard-right .dashboard-right-lower .grid-item-one {
   grid-area: header;
+  padding: 20px;
 }
 
 .dashboard-right .dashboard-right-lower .grid-item-two {

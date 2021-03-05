@@ -24,7 +24,9 @@ export default function Dashboard() {
         </div>
         <div className="dashboard-right-lower">
           <div className="grid-item-one grid-item">
-            
+            <h2>
+              Quick queue
+            </h2>
           </div>
           <div className="grid-item-two grid-item">
             <div className="graph1">1</div>
