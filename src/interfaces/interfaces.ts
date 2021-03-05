@@ -37,4 +37,5 @@ export interface RouteInterface {
   path: string;
   Component: any;
   name: string;
+  icon: string;
 }

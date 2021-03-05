@@ -18,11 +18,11 @@ import App from '../../../../App';
   * Routes
 */
 export const routes: RouteInterface[] = [
-  { path: '/', Component: App, name: 'Home' },
-  { path: '/dashboard', Component: Dashboard, name: 'Dashboard' },
-  { path: '/friends', Component: Friends, name: 'Friends' },
-  { path: '/game', Component: Game, name: 'Game' },
-  { path: '/profile', Component: Profile, name: 'Profile' },
-  { path: '/search', Component: Search, name: 'Search' },
-  { path: '/statistics', Component: Statistics, name: 'Statistics' },
+  { path: '/', Component: App, name: 'Home', icon: '' },
+  { path: '/dashboard', Component: Dashboard, name: 'Dashboard', icon: 'mdi-home-outline' },
+  { path: '/friends', Component: Friends, name: 'Friends', icon: 'mdi-account-multiple' },
+  { path: '/game', Component: Game, name: 'Game', icon: 'mdi-gamepad-square-outline' },
+  { path: '/profile', Component: Profile, name: 'Profile', icon: 'mdi-human-handsdown' },
+  { path: '/search', Component: Search, name: 'Search', icon: 'mdi-database-search'},
+  { path: '/statistics', Component: Statistics, name: 'Statistics', icon: 'mdi-chart-areaspline' },
 ];

@@ -63,3 +63,29 @@ input::placeholder {
   border-radius: 2px;
   margin-top: 30px;
 }
+
+/* MDI */
+
+.mdi {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+  transition: all 0.3s ease-in;
+}
+
+.mdi:hover {
+  color: orange;
+}
+
+/* M/P */
+
+.mr-2 {
+  margin-right: 15px;
+}
+
+.big {
+  font-size: 2rem;
+  margin-left: 20px;
+  position: absolute;
+  top: -10px;
+}
