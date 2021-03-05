@@ -25,31 +25,15 @@ import './components/utils/css/mq.css';
 */
 import CheckAuthContext from './hooks/CheckAuthContext';
 
-/* 
-  * Elements
+/*
+ * Components
 */
-import Dashboard from './components/layout/dashboard/Dashboard';
-import Friends from './components/layout/dashboard/Friends';
-import Game from './components/layout/dashboard/Game';
-import Profile from './components/layout/dashboard/Profile';
-import Search from './components/layout/dashboard/Search';
-import Statistics from './components/layout/dashboard/Statistics';
 import Notification from './components/el/Notification';
-import App from './App';
 
-
-/* 
-  * Routes
+/*
+ * Routes
 */
-const routes = [
-  { path: '/', Component: App, name: 'Home' },
-  { path: '/dashboard', Component: Dashboard, name: 'Dashboard' },
-  { path: '/friends', Component: Friends, name: 'Friends' },
-  { path: '/game', Component: Game, name: 'Game' },
-  { path: '/profile', Component: Profile, name: 'Profile' },
-  { path: '/search', Component: Search, name: 'Search' },
-  { path: '/statistics', Component: Statistics, name: 'Statistics' },
-];
+import { routes } from './components/utils/ts/constants/routes';
 
 /* 
   * Render

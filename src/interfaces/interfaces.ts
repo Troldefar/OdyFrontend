@@ -32,3 +32,9 @@ export interface MessageInterface {
   msg: string;
   [key:string]: string;
 }
+
+export interface RouteInterface {
+  path: string;
+  Component: any;
+  name: string;
+}
