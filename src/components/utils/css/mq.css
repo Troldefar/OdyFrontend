@@ -1,5 +1,8 @@
 @media screen and (max-width: 600px) {
+  body {
+    display: none;
+  }
   .form-card {
-    width: 80%; 
+    width: 80%;
   }
 }
