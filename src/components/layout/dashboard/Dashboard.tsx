@@ -27,7 +27,10 @@ export default function Dashboard() {
             
           </div>
           <div className="grid-item-two grid-item">
-            
+            <div className="graph1">1</div>
+            <div className="graph1">1</div>
+            <div className="graph1">1</div>
+            <div className="graph1">1</div>
           </div>
           <div className="grid-item-three grid-item">
             
