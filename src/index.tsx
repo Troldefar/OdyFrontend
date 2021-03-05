@@ -1,7 +1,8 @@
+/* 
+  * Imports
+*/
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { Provider } from 'react-redux';
@@ -11,21 +12,35 @@ import { CSSTransition } from 'react-transition-group'
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
+/* 
+  * CSS
+*/
 import './App.css';
 import './components/utils/css/util.css';
 import './components/utils/css/keyframes.css';
 import './components/utils/css/mq.css';
 
+/* 
+  * Hooks
+*/
 import CheckAuthContext from './hooks/CheckAuthContext';
-import Notification from './components/el/Notification';
 
+/* 
+  * Elements
+*/
 import Dashboard from './components/layout/dashboard/Dashboard';
 import Friends from './components/layout/dashboard/Friends';
 import Game from './components/layout/dashboard/Game';
 import Profile from './components/layout/dashboard/Profile';
 import Search from './components/layout/dashboard/Search';
 import Statistics from './components/layout/dashboard/Statistics';
+import Notification from './components/el/Notification';
+import App from './App';
 
+
+/* 
+  * Routes
+*/
 const routes = [
   { path: '/', Component: App, name: 'Home' },
   { path: '/dashboard', Component: Dashboard, name: 'Dashboard' },
@@ -36,6 +51,9 @@ const routes = [
   { path: '/statistics', Component: Statistics, name: 'Statistics' },
 ];
 
+/* 
+  * Render
+*/
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -43,8 +61,8 @@ ReactDOM.render(
         <Notification />
         <Switch>
           { routes.map(({ path, Component }) => (
-            <Route key={path} exact path={path}>
-              {({ match }) => (
+            <AuthRoute key={path} exact component={Component} path={path}>
+              {({ match }: any) => (
                 <CSSTransition
                   in={match != null}
                   timeout={300}
@@ -56,7 +74,7 @@ ReactDOM.render(
                   </>
                 </CSSTransition>
               )}
-            </Route>
+            </AuthRoute>
           ))}
         </Switch>
       </Provider>
@@ -65,6 +83,9 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+/* 
+  * Auth checker
+*/
 function AuthRoute({component: Component, ...rest}: any) {
   const user = CheckAuthContext();
   return (
