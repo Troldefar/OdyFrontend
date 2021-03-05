@@ -1,5 +1,5 @@
 export default function Dashboard() {
-  let date = new Date().toString().substr(0, 25);
+  let date = new Date().toString().substr(3, 22);
   return (
     <div className="dashboard-container">
       <div className="dashboard-left">
@@ -23,7 +23,21 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="dashboard-right-lower">
-          Content
+          <div className="grid-item-one grid-item">
+            
+          </div>
+          <div className="grid-item-two grid-item">
+            
+          </div>
+          <div className="grid-item-three grid-item">
+            
+          </div>
+          <div className="grid-item-four grid-item">
+            
+          </div>
+          <div className="grid-item-five grid-item">
+            
+          </div>
         </div>
       </div>
     </div>
