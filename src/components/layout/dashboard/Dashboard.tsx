@@ -1,3 +1,5 @@
+import ChartElement from '../../el/ChartElement';
+
 export default function Dashboard() {
   let date = new Date().toString().substr(3, 22);
   return (
@@ -29,10 +31,18 @@ export default function Dashboard() {
             </h2>
           </div>
           <div className="grid-item-two grid-item">
-            <div className="graph1">1</div>
-            <div className="graph1">1</div>
-            <div className="graph1">1</div>
-            <div className="graph1">1</div>
+            <div className="graph1">
+              <ChartElement options={{12: 12}} chartIdentifier="testChart1" />
+            </div>
+            <div className="graph1">
+              <ChartElement options={{12: 12}} chartIdentifier="testChart2" />
+            </div>
+            <div className="graph1">
+              <ChartElement options={{12: 12}} chartIdentifier="testChart3" />
+            </div>
+            <div className="graph1">
+              <ChartElement options={{12: 12}} chartIdentifier="testChart4" />
+            </div>
           </div>
           <div className="grid-item-three grid-item">
             
