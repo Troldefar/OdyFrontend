@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import Button from './Button';
 
 import { login } from '../../redux/user';
+import { notEmpty, empty } from '../../redux/notification';
 
 export default function Form(props: any) {
   const [email, setEmail] = useState('');
@@ -15,6 +16,13 @@ export default function Form(props: any) {
   // login
   function tryLogin(e: any): void {
     e.preventDefault();
+    if(email === '' || password === '') {
+      dispatch(notEmpty('Email or password is not provided'));
+      setTimeout(() => {
+        dispatch(empty());
+      }, 3000);
+      return;
+    }
     try {
       fetch('http://127.0.0.1:8000/api/auth/login', {
         headers: {'Content-Type': 'application/json'},

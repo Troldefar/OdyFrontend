@@ -6,6 +6,7 @@
   box-shadow: none;
   border: none;
   width: 100%;
+  font-size: 0.9rem;
   padding: 5px;
   cursor: pointer;
   transition: all 0.3s ease-in;
@@ -39,14 +40,14 @@
 .input {
   border: none;
   background: none;
-  border: 1px solid rgb(202, 200, 200);
+  border-bottom: 1px solid rgb(202, 200, 200);
   width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
-  border-radius: 2px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
   outline: none;
   color: white;
-  padding: 10px;
+  padding-left: 2px;
+  padding-bottom: 5px;
 }
 
 input::placeholder {

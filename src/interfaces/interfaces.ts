@@ -27,3 +27,8 @@ export interface ReduxAction {
 export interface PropsInterface {
   component: React.FC<any>;
 }
+
+export interface MessageInterface {
+  msg: string;
+  [key:string]: string;
+}

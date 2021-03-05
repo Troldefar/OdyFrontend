@@ -7,6 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from "./redux/store";
 
+import { CSSTransition } from 'react-transition-group'
+
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 import './App.css';
@@ -24,19 +26,38 @@ import Profile from './components/layout/dashboard/Profile';
 import Search from './components/layout/dashboard/Search';
 import Statistics from './components/layout/dashboard/Statistics';
 
+const routes = [
+  { path: '/', Component: App, name: 'Home' },
+  { path: '/dashboard', Component: Dashboard, name: 'Dashboard' },
+  { path: '/friends', Component: Friends, name: 'Friends' },
+  { path: '/game', Component: Game, name: 'Game' },
+  { path: '/profile', Component: Profile, name: 'Profile' },
+  { path: '/search', Component: Search, name: 'Search' },
+  { path: '/statistics', Component: Statistics, name: 'Statistics' },
+];
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Provider store={store}>
         <Notification />
         <Switch>
-          <AuthRoute exact path="/dashboard" component={ Dashboard } />
-          <AuthRoute exact path="/friends" component={ Friends } />
-          <AuthRoute exact path="/game" component={ Game } />
-          <AuthRoute exact path="/profile" component={ Profile } />
-          <AuthRoute exact path="/search" component={ Search } />
-          <AuthRoute exact path="/statistics" component={ Statistics } />
-          <Route exact path="/" component={ App } />
+          { routes.map(({ path, Component }) => (
+            <Route key={path} exact path={path}>
+              {({ match }) => (
+                <CSSTransition
+                  in={match != null}
+                  timeout={300}
+                  className="route"
+                  unmountOnExit
+                >
+                  <>
+                    <Component />
+                  </>
+                </CSSTransition>
+              )}
+            </Route>
+          ))}
         </Switch>
       </Provider>
     </Router>
