@@ -1,7 +1,9 @@
+import Form from '../../el/Form';
+
 export default function Register() {
   return (
-    <div>
-      
-    </div>
+    <>
+     <Form type="register" /> 
+    </>
   )
 }

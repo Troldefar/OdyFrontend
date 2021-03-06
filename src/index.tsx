@@ -8,8 +8,6 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from "./redux/store";
 
-import { CSSTransition } from 'react-transition-group'
-
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 /* 
@@ -47,18 +45,9 @@ ReactDOM.render(
         <Switch>
           { routes.map(({ path, Component }) => (
             <AuthRoute key={path} exact component={Component} path={path}>
-              {({ match }: any) => (
-                <CSSTransition
-                  in={match != null}
-                  timeout={300}
-                  className="route"
-                  unmountOnExit
-                >
-                  <>
-                    <Component />
-                  </>
-                </CSSTransition>
-              )}
+              <>
+                <Component />
+              </>
             </AuthRoute>
           ))}
           <Route path="/register" component={Register} />

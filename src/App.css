@@ -36,8 +36,8 @@ html {
 
 .form-card {
   display: flex;
-  width: 70%;
-  height: 50%;
+  width: 45%;
+  height: 65%;
   box-shadow: 2px 2px 2px rgb(0, 0, 0);
   position: relative;
   animation: slideInFromLeft 0.5s;
@@ -101,10 +101,11 @@ html {
 .notification {
   position: absolute;
   top: 15px;
-  right: 5px;
+  z-index: 100;
+  padding: 10px;
+  right: 10px;
   border-radius: 5px;
   background: rgb(99, 126, 99);
-  padding: 10px;
   color: white;
   animation: slideInFromRight;
   animation-duration: 0.5s;
@@ -140,6 +141,7 @@ html {
 
 .navbar-ul-li:hover {
   background: #0b132b;
+  color: orange;
 }
 
 .navbar-ul-li span {

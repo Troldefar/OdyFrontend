@@ -9,7 +9,7 @@ export default function Navbar() {
         {
           routes.map((route) => (
             <Link to={route.path} className="navbar-ul-li">
-              <span className={ `mdi ${route.icon}` }></span>
+              <span className={ `mdi ${route.icon} fs-2` }></span>
               { route.name }
             </Link>
           ))
