@@ -3,10 +3,10 @@ import Navbar from '../menu/Navbar';
 
 import NumericView from '../dashboardElements/DashboardIndexPage/NumericView';
 import CanvasView from '../dashboardElements/DashboardIndexPage/CanvasView';
-import GuildView from '../dashboardElements/DashboardIndexPage/GuildView';
+import GuildView from '../dashboardElements/DashboardIndexPage/QuickSearch';
 import CurrentGroup from '../dashboardElements/DashboardIndexPage/CurrentGroup';
 
-export default function Dashboard() {
+export default function Dashboard(): JSX.Element {
   return (
     <div className="dashboard-container">
       <div className="dashboard-left">

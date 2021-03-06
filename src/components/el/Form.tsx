@@ -57,6 +57,7 @@ export default function Form(props: any) {
       setTimeout(() => {
         dispatch(empty());
       }, 3000);
+      return;
     }
     if(!pwMatch) {
       dispatch(notEmpty('Passwords must match'));

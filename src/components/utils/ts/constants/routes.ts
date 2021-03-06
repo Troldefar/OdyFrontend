@@ -21,8 +21,8 @@ export const routes: RouteInterface[] = [
   { path: '/', Component: App, name: '', icon: '' },
   { path: '/dashboard', Component: Dashboard, name: 'Dashboard', icon: 'mdi-home-outline' },
   { path: '/friends', Component: Friends, name: 'Friends', icon: 'mdi-account-multiple' },
-  { path: '/game', Component: Game, name: 'Game', icon: 'mdi-gamepad-square-outline' },
+  { path: '/game', Component: Game, name: 'Game', icon: 'mdi-sword' },
   { path: '/profile', Component: Profile, name: 'Profile', icon: 'mdi-human-handsdown' },
   { path: '/search', Component: Search, name: 'Search', icon: 'mdi-database-search'},
-  { path: '/statistics', Component: Statistics, name: 'Statistics', icon: 'mdi-chart-areaspline' },
+  { path: '/statistics', Component: Statistics, name: 'Statistics', icon: 'mdi-chart-bell-curve-cumulative' },
 ];
