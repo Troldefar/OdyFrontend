@@ -39,3 +39,9 @@ export interface RouteInterface {
   name: string;
   icon: string;
 }
+
+export interface CanvasProps {
+  width: number;
+  height: number;
+  canvasIdentifier: string;
+}

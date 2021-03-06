@@ -1,7 +1,13 @@
-import Chart from 'chart.js';
+import { CanvasProps } from '../../interfaces/interfaces';
 
-export default function ChartElement({options, canvasIdentifier}: any): any {
-  const displayCanvas: any = <canvas id={canvasIdentifier}></canvas>;
-  const newChart = new Chart(displayCanvas.getContext('2d'), options);
-  console.log(newChart);
+const Canvas = ({canvasIdentifier}: CanvasProps) => {
+  const canvas: any = <canvas id={canvasIdentifier} />
+  return canvas;
 }
+
+Canvas.defaultProps = {
+  width: window.innerWidth,
+  height: window.innerHeight
+}
+
+export default Canvas;

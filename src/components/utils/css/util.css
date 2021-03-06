@@ -77,7 +77,15 @@ input::placeholder {
   color: orange;
 }
 
+.lesser-line {
+  border: 0.5px solid white;
+}
+
 /* M/P */
+
+.mt-2 {
+  margin-top: 5px;
+}
 
 .mr-2 {
   margin-right: 15px;
@@ -88,4 +96,8 @@ input::placeholder {
   margin-left: 20px;
   position: absolute;
   top: -10px;
+}
+
+.big-text {
+  font-size: 2rem;
 }
