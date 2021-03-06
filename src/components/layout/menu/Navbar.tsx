@@ -1,5 +1,4 @@
-import { useSelector } from 'react-redux';
-import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { routes } from '../../utils/ts/constants/routes';
 

@@ -1,5 +1,3 @@
-import { useSelector } from 'react-redux';
-
 export default function LoggedInMenu() {
   const date = new Date().toString().substr(3, 22); 
   return (

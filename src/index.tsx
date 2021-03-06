@@ -29,6 +29,7 @@ import CheckAuthContext from './hooks/CheckAuthContext';
  * Components
 */
 import Notification from './components/el/Notification';
+import Register from './components/layout/register/Register';
 
 /*
  * Routes
@@ -60,6 +61,8 @@ ReactDOM.render(
               )}
             </AuthRoute>
           ))}
+          <Route path="/register" component={Register} />
+          <Route render={() => <Redirect to={{pathname: '/'}} />} />
         </Switch>
       </Provider>
     </Router>

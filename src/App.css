@@ -28,6 +28,10 @@ html {
   position: relative;
   height: 100%;
   width: 100%;
+  background: url('https://w.wallhaven.cc/full/rd/wallhaven-rddgwm.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .form-card {
@@ -49,6 +53,23 @@ html {
   background: #172037;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  position: relative;
+}
+
+.form-form .newUser {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.form-form .newUser p {
+  transition: all 0.3s ease-in;
+}
+
+.form-form .newUser p:hover {
+  color: orange;
 }
 
 .form-form form {
@@ -113,7 +134,7 @@ html {
 }
 
 .navbar-ul-li {
-  line-height: 2;
+  line-height: 3;
   transition: all 0.3s ease-in;
 }
 

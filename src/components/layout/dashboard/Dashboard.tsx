@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 import LoggedInMenu from '../menu/LoggedInMenu';
 import Navbar from '../menu/Navbar';
 
@@ -9,7 +7,6 @@ import GuildView from '../dashboardElements/DashboardIndexPage/GuildView';
 import CurrentGroup from '../dashboardElements/DashboardIndexPage/CurrentGroup';
 
 export default function Dashboard() {
-  let date = new Date().toString().substr(3, 22); 
   return (
     <div className="dashboard-container">
       <div className="dashboard-left">

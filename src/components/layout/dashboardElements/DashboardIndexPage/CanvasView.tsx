@@ -15,7 +15,7 @@ export default function CanvasView() {
   }
   useEffect(() => {
     ok();
-  }, [ok()])  
+  }, [])  
   return (
     <div className="grid-item-three grid-item displayFlexAndCenter">
       <div className="canvasContainer displayFlexAndCenter">

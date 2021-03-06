@@ -39,6 +39,9 @@ export default function Form(props: any) {
       throw new Error(e.message);
     }
   }
+  function pushRegisterRoute() {
+    history.push('/register');
+  }
   // return
   return (
     <div className="center-form displayFlexAndCenter">
@@ -72,6 +75,11 @@ export default function Form(props: any) {
               text="Login"
             />
           </form>
+          <div className="newUser">
+            <p onClick={pushRegisterRoute}>
+              New?
+            </p>
+          </div>
         </div>
       </div>
     </div>
