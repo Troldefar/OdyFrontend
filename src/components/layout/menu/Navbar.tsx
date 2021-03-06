@@ -1,22 +1,21 @@
 import { useSelector } from 'react-redux';
+import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
+
+import { routes } from '../../utils/ts/constants/routes';
 
 export default function Navbar() {
-  const { user }:any = useSelector<any>((state) => state.user);
-  if(user.user) {
-    return (
-      <div className="navBar">
-        { user.user ?
-            <button className="small-btn">
-              { user.user.email }
-            </button>
-            :
-            ''
+  return (
+    <div className="navbar">
+      <ul className="navbar-ul">
+        {
+          routes.map((route) => (
+            <Link to={route.path} className="navbar-ul-li">
+              <span className={ `mdi ${route.icon}` }></span>
+              { route.name }
+            </Link>
+          ))
         }
-      </div>
-    )
-  } else {
-    return (
-      <></>
-    )
-  }
+      </ul>
+    </div>
+  );
 }

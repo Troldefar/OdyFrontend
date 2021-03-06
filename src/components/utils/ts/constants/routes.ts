@@ -18,7 +18,7 @@ import App from '../../../../App';
   * Routes
 */
 export const routes: RouteInterface[] = [
-  { path: '/', Component: App, name: 'Home', icon: '' },
+  { path: '/', Component: App, name: '', icon: '' },
   { path: '/dashboard', Component: Dashboard, name: 'Dashboard', icon: 'mdi-home-outline' },
   { path: '/friends', Component: Friends, name: 'Friends', icon: 'mdi-account-multiple' },
   { path: '/game', Component: Game, name: 'Game', icon: 'mdi-gamepad-square-outline' },
