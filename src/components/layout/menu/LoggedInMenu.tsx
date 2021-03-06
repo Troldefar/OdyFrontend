@@ -4,7 +4,7 @@ export default function LoggedInMenu(props: any): JSX.Element {
   return (
     <div className="dashboard-right-upper">
       <h3>
-        Dashboard { path }
+        Dashboard { path === '/dashboard' ? '' : path }
       </h3>
       <h3>
         { date }
