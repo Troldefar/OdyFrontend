@@ -101,3 +101,11 @@ input::placeholder {
 .big-text {
   font-size: 2rem;
 }
+
+/* Standard flex properties */
+
+.displayFlexAndCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

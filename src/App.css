@@ -28,9 +28,6 @@ html {
   position: relative;
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .form-card {
@@ -49,9 +46,6 @@ html {
 }
 
 .form-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: #172037;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -66,9 +60,6 @@ html {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: all 0.3s ease-in;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -180,9 +171,6 @@ html {
 .dashboard-right .dashboard-right-lower .grid-item-two div {
   position: relative;
   background: #172037;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
 }
 
@@ -195,14 +183,10 @@ html {
 
 .dashboard-right .dashboard-right-lower .grid-item-three {
   grid-area: content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .dashboard-right .dashboard-right-lower .grid-item-four {
   padding: 20px;
-  overflow-y: scroll;
 }
 
 .dashboard-right .dashboard-right-lower .grid-item-four p {
@@ -230,4 +214,9 @@ html {
 
 .dashboard-right .dashboard-right-lower .grid-item:hover {
   filter: brightness(1.3);
+}
+
+.canvasContainer {
+  height: 80%;
+  width: 80%;
 }

@@ -8,7 +8,9 @@ export default function Dashboard() {
   let date = new Date().toString().substr(3, 22);
   function ok() {
     const canvas: any = document.getElementById("test");
-    if(canvas) {
+    if(!canvas) {
+      return;
+    } else {
       const ctx = canvas.getContext("2d");
       renderChart(ctx);
     }
@@ -40,7 +42,7 @@ export default function Dashboard() {
         </div>
         <div className="dashboard-right-lower">
           <div className="grid-item-two grid-item">
-            <div className="statsContainer">
+            <div className="statsContainer displayFlexAndCenter">
               <h2>
                 Games played
               </h2>
@@ -48,7 +50,7 @@ export default function Dashboard() {
                 0
               </h1>
             </div>
-            <div className="statsContainer">
+            <div className="statsContainer displayFlexAndCenter">
               <h2>
                 Friends online
               </h2>
@@ -56,7 +58,7 @@ export default function Dashboard() {
                 0
               </h1>
             </div>
-            <div className="statsContainer">
+            <div className="statsContainer displayFlexAndCenter">
               <h2>
                 Last logged in
               </h2>
@@ -64,7 +66,7 @@ export default function Dashboard() {
                 { new Date().toString().substr(0, 10) }
               </h1>
             </div>
-            <div className="statsContainer">
+            <div className="statsContainer displayFlexAndCenter">
               <h2>
                 Rating
               </h2>
@@ -73,8 +75,10 @@ export default function Dashboard() {
               </h1>
             </div>
           </div>
-          <div className="grid-item-three grid-item">
-            <Canvas canvasIdentifier="test" />
+          <div className="grid-item-three grid-item displayFlexAndCenter">
+            <div className="canvasContainer displayFlexAndCenter">
+              <Canvas canvasIdentifier="test" />
+            </div>
           </div>
           <div className="grid-item-four grid-item">
             <h2>

@@ -41,14 +41,14 @@ export default function Form(props: any) {
   }
   // return
   return (
-    <div className="center-form">
+    <div className="center-form displayFlexAndCenter">
       <div className="form-card">
-        <div className="form-image">
+        <div className="form-image displayFlexAndCenter">
           <h2>
             Ody
           </h2>
         </div>
-        <div className="form-form">
+        <div className="form-form displayFlexAndCenter">
           <form
             method="post"
             className="login-form"
