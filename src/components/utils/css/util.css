@@ -71,6 +71,10 @@ input::placeholder {
   margin-top: 30px;
 }
 
+.success {
+  background: rgb(127, 165, 127);
+}
+
 /* MDI */
 
 .mdi {

@@ -1,9 +1,10 @@
-export default function LoggedInMenu() {
-  const date = new Date().toString().substr(3, 22); 
+export default function LoggedInMenu(props: any): JSX.Element {
+  const date = new Date().toString().substr(3, 22);
+  const path = window.location.pathname;
   return (
     <div className="dashboard-right-upper">
       <h3>
-        Dashboard
+        Dashboard { path }
       </h3>
       <h3>
         { date }
