@@ -1,6 +1,9 @@
 import LoggedInMenu from '../menu/LoggedInMenu';
 import Navbar from '../menu/Navbar';
 
+import SearchInput from '../dashboardElements/DashboardSearchPage/SearchInput';
+import SearchOutput from '../dashboardElements/DashboardSearchPage/SearchOutput';
+
 export default function Search(): JSX.Element {
   return (
     <div className="dashboard-container">
@@ -12,8 +15,9 @@ export default function Search(): JSX.Element {
       </div>
       <div className="dashboard-right">
         <LoggedInMenu />
-        <div className="dashboard-right-lower">
-          Search section
+        <div className="dashboard-right-lower-search-section">
+          <SearchInput />
+          <SearchOutput />
         </div>
       </div>
     </div>
