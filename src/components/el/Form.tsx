@@ -7,7 +7,7 @@ import Button from './Button';
 import { login } from '../../redux/user';
 import { notEmpty, empty } from '../../redux/notification';
 
-export default function Form(props: any) {
+export default function Form(props: any): any {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
@@ -71,6 +71,32 @@ export default function Form(props: any) {
         headers: {'Content-Type': 'application/json'},
         method: 'POST',
         body: JSON.stringify({email, password, name, age, country, favorite_game: favoriteGame})
+      })
+        .then(response => response.json())
+        .then(json => {
+          dispatch(login(json.original));
+          history.push('/dashboard');
+        })
+        .catch((error: any) => console.log(error));
+    } catch (e) {
+      throw new Error(e.message);
+    }
+  }
+  async function tryUpdateProfile(e: any) : Promise<any> {
+    e.preventDefault();
+    const pwMatch = password === passwordConfirmation;
+    if(!pwMatch) {
+      dispatch(notEmpty('Passwords must match'));
+      setTimeout(() => {
+        dispatch(empty());
+      }, 3000);
+      return;
+    }
+    try {
+      await fetch('http://127.0.0.1:8000/api/user/update', {
+        headers: {'Content-Type': 'application/json'},
+        method: 'POST',
+        body: JSON.stringify({email, password, name})
       })
         .then(response => response.json())
         .then(json => {
@@ -190,8 +216,24 @@ export default function Form(props: any) {
       </div>
     </div>
   </div>
-  // return
-  return (
-    type === 'register' ? registerDiv : loginDiv
-  )
+  const profileDiv = 
+    <div className="edit-profile-card">
+      <h1>
+        Username
+      </h1>
+      <form onSubmit={tryUpdateProfile} method="post" encType="multipart/form-data">
+      <input onChange={(e:any) => setName(e.target.value)} type="text" placeholder="Name" className="input" />
+      <input onChange={(e:any) => setEmail(e.target.value)} type="text" placeholder="Email" className="input" />
+      <input onChange={(e:any) => setPassword(e.target.value)} type="text" placeholder="Password" className="input" />
+      <input onChange={(e:any) => setPasswordConfirmation(e.target.value)} type="text" placeholder="Reenter new password" className="input" />
+      <Button text="Update profile" />
+      </form>
+    </div>
+  if(type === 'register') {
+    return (registerDiv);
+  } else if(type === 'login') {
+    return (loginDiv);
+  } else if(type === 'profile') {
+    return (profileDiv);
+  }
 }

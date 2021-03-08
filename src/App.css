@@ -251,6 +251,34 @@ html {
 
 /********************** END OF FRIENDS SECTION **********************/
 
+/********************** START OF PROFILE SECTION **********************/
+
+.dashboard-right-lower-profile-section {
+  flex: 8;
+}
+
+.dashboard-right-lower-profile-section .profile-card {
+  height: 70%;
+  margin-top: 5%;
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  background: #172037;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px black;
+  padding: 20px;
+}
+
+.edit-profile-card {
+  text-align: center;
+}
+
+.edit-profile-card h1 {
+  margin-bottom: 30px;
+}
+
+/********************** END OF PROFILE SECTION **********************/
+
 .dashboard-right .dashboard-right-lower .grid-item {
   background: #172037;
   border-radius: 5px;

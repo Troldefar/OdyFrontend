@@ -1,7 +1,12 @@
+import { useSelector } from 'react-redux';
+
 import LoggedInMenu from '../menu/LoggedInMenu';
 import Navbar from '../menu/Navbar';
 
+import ProfileCard from '../dashboardElements/DashboardProfilePage/ProfileCard';
+
 export default function Profile(): JSX.Element {
+  const {user}: any = useSelector<any>((state) => state.user);
   return (
     <div className="dashboard-container">
       <div className="dashboard-left">
@@ -12,8 +17,8 @@ export default function Profile(): JSX.Element {
       </div>
       <div className="dashboard-right">
         <LoggedInMenu />
-        <div className="dashboard-right-lower">
-          Profile section
+        <div className="dashboard-right-lower-profile-section">
+          <ProfileCard user={user.user} />
         </div>
       </div>
     </div>
