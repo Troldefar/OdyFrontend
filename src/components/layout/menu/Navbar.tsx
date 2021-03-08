@@ -6,6 +6,9 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <ul className="navbar-ul">
+        <p>
+          Main
+        </p>
         {
           routes.map((route) => (
             route.name !== '' ?
@@ -16,6 +19,9 @@ export default function Navbar() {
             : ''
           ))
         }
+        <p>
+          Others
+        </p>
       </ul>
     </div>
   );

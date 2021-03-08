@@ -1,5 +1,9 @@
+import { games } from '../../utils/ts/constants/games';
+
 import LoggedInMenu from '../menu/LoggedInMenu';
 import Navbar from '../menu/Navbar';
+
+import GameCard from '../../layout/dashboardElements/DashboardGamePage/GameCard';
 
 export default function Game(): JSX.Element {
   return (
@@ -12,8 +16,12 @@ export default function Game(): JSX.Element {
       </div>
       <div className="dashboard-right">
         <LoggedInMenu />
-        <div className="dashboard-right-lower">
-          Game section
+        <div className="dashboard-right-lower game-container">
+          {
+            games.map(game => (
+              <GameCard name={game.name} image={game.image} />
+            ))
+          }
         </div>
       </div>
     </div>

@@ -45,3 +45,8 @@ export interface CanvasProps {
   height: number;
   canvasIdentifier: string;
 }
+
+export interface GameDisplayInterface {
+  name: string;
+  image: string;
+}

@@ -19,10 +19,10 @@ import App from '../../../../App';
 */
 export const routes: RouteInterface[] = [
   { path: '/', Component: App, name: '', icon: '' },
-  { path: '/dashboard', Component: Dashboard, name: 'Dashboard', icon: 'mdi-home-outline' },
+  { path: '/dashboard', Component: Dashboard, name: 'Dashboard', icon: 'mdi-home-circle' },
   { path: '/friends', Component: Friends, name: 'Friends', icon: 'mdi-account-multiple' },
   { path: '/game', Component: Game, name: 'Game', icon: 'mdi-sword' },
-  { path: '/profile', Component: Profile, name: 'Profile', icon: 'mdi-human-handsdown' },
-  { path: '/search', Component: Search, name: 'Search', icon: 'mdi-database-search'},
+  { path: '/profile', Component: Profile, name: 'Profile', icon: 'mdi-face-agent' },
+  { path: '/search', Component: Search, name: 'Search', icon: 'mdi-shield-search'},
   { path: '/statistics', Component: Statistics, name: 'Statistics', icon: 'mdi-chart-bell-curve-cumulative' },
 ];

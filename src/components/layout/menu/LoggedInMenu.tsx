@@ -9,7 +9,7 @@ export default function LoggedInMenu(props: any): JSX.Element {
         { date }
       </h3>
       <div className="icons">
-        <span className="mdi mdi-database-search mr-2"></span>
+        <span className="mdi mdi-shield-search mr-2"></span>
         <span className="mdi mdi-bell-ring-outline mr-2"></span>
         <span className="mdi mdi-cog-outline mr-2"></span>
         <span className="mdi mdi-face-outline big"></span>
