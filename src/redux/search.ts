@@ -8,11 +8,14 @@ export const searchSlicer = createSlice({
   reducers: {
     search: (state, action) => {
       state.search = action.payload;
+    },
+    clear: (state) => {
+      state.search = '';
     }
   }
 })
 
 // Action creators are generated for each case reducer function
-export const { search } = searchSlicer.actions
+export const { search, clear } = searchSlicer.actions
 
 export default searchSlicer.reducer

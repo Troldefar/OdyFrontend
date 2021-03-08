@@ -1,9 +1,12 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
+
+import { clear } from '../../../../redux/search';
 
 export default function SearchOutput() {
   const [users, setUsers] = useState<any>([]);
   const search: any = useSelector<any>((state) => state.search);
+  const dispatch = useDispatch();
   const searchInput = async(): Promise<any> => {
     try {
       await fetch(`http://127.0.0.1:8000/api/search/search?query=${search.search}`, {
@@ -21,10 +24,11 @@ export default function SearchOutput() {
     }
   }
   useEffect(() => {
+    searchInput();
     return () => {
-      console.log("dismounted");
+      dispatch(clear());
     }
-  }, [searchInput()])
+  }, [search])
   return (
     <div className="search-output">
       {
