@@ -317,6 +317,7 @@ html {
   border-radius: 5px 0 0 5px;
   outline: none;
   color: black;
+  background:rgb(212, 211, 211);
   font-size: 1.1rem;
   animation: grow;
   animation-duration: 0.4s;
@@ -333,6 +334,26 @@ html {
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 20px;
+}
+
+.search-output {
+
+}
+
+.userSearchCard {
+  background: #172037;
+  width: 20%;
+  display: inline-block;
+  margin: 5px;
+  color: black;
+  padding: 20px;
+  border-radius: 2px;
+  transition: all 0.3s ease-in;
+}
+
+.userSearchCard:hover {
+  background: black;
+  color: orange;
 }
 
 /********************** END OF SEARCH SECTION **********************/
