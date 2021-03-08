@@ -18,7 +18,7 @@ export default function SearchInput() {
     return () => {
       dispatch(search(''));
     }
-  }, []);
+  });
   return (
     <div className="search-input">
       <div className="search">

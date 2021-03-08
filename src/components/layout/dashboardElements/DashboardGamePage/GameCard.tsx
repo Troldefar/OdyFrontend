@@ -1,5 +1,3 @@
-import { url } from "inspector";
-
 export default function GameCard({name, image}: any): JSX.Element {
   return (
     <div className="game-card-container" 

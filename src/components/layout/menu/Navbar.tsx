@@ -22,7 +22,7 @@ export default function Navbar() {
         {
           routes.map((route) => (
             route.name !== '' ?
-            <Link to={route.path} className="navbar-ul-li">
+            <Link key={route.name} to={route.path} className="navbar-ul-li">
               <span className={ `mdi ${route.icon} fs-2` }></span>
               { route.name }
             </Link>

@@ -340,7 +340,7 @@ html {
 
 }
 
-.userSearchCard {
+.user-search-card {
   background: #172037;
   width: 20%;
   display: inline-block;
@@ -349,9 +349,16 @@ html {
   padding: 20px;
   border-radius: 2px;
   transition: all 0.3s ease-in;
+  position: relative;
 }
 
-.userSearchCard:hover {
+.user-search-card .actions {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.user-search-card:hover {
   background: black;
   color: orange;
 }

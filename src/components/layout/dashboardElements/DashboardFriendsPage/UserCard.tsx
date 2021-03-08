@@ -1,4 +1,4 @@
-export default function UserCard<user extends {name: string; email: string;}>({user}: any): JSX.Element {
+export default function UserCard({user}: any): JSX.Element {
   return (
     <div className="user-card displayFlexAndCenter">
       <span className="name">
