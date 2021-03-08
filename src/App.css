@@ -218,6 +218,35 @@ html {
 
 .dashboard-right-lower-friends-section {
   flex: 8;
+  padding: 0px 20px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-card {
+  background: darkgrey;
+  flex: 1;
+  height: 10%;
+  margin: 0px 10px;
+  border-radius: 2px;
+  color: black;
+  transition: all 0.3s ease-in;
+  position: relative;
+  background: url('https://w.wallhaven.cc/full/qd/wallhaven-qdog37.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.user-card .invite-user {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.user-card:hover {
+  background: black;
+  color: white;
 }
 
 /********************** END OF FRIENDS SECTION **********************/
