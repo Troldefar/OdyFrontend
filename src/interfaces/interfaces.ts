@@ -50,3 +50,8 @@ export interface GameDisplayInterface {
   name: string;
   image: string;
 }
+
+export interface UserInterface {
+  name: string;
+  email: string;
+}
