@@ -55,3 +55,10 @@ export interface UserInterface {
   name: string;
   email: string;
 }
+
+export interface StatisticsDisplayInterface {
+  title: string;
+  text: string;
+  direction: string;
+  customClassName: string;
+}
