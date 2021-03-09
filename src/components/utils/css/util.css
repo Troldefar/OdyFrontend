@@ -140,11 +140,15 @@ select {
   width: 100%;
   margin-bottom: 15px;
 }
+
 /* Remove IE arrow */
+
 select::-ms-expand {
   display: none;
 }
+
 /* Custom Select */
+
 .select {
   position: relative;
   display: flex;
@@ -153,7 +157,7 @@ select::-ms-expand {
   line-height: 3;
   background: #2c3e50;
   overflow: hidden;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
 select {
   flex: 1;
@@ -162,9 +166,11 @@ select {
   color: #fff;
   cursor: pointer;
 }
+
 /* Arrow */
+
 .select::after {
-  content: '\25BC';
+  content: "\25BC";
   position: absolute;
   top: 0;
   right: 0;
@@ -172,11 +178,22 @@ select {
   background: #34495e;
   cursor: pointer;
   pointer-events: none;
-  -webkit-transition: .25s all ease;
-  -o-transition: .25s all ease;
-  transition: .25s all ease;
+  -webkit-transition: 0.25s all ease;
+  -o-transition: 0.25s all ease;
+  transition: 0.25s all ease;
 }
+
 /* Transition */
 .select:hover::after {
   color: #f39c12;
+}
+
+/* Colors */
+
+.crimsonColor {
+  color: crimson;
+}
+
+.greenColor {
+  color: rgb(89, 168, 89);
 }

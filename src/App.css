@@ -366,28 +366,61 @@ html {
 
 /********************** START OF STATISTICS SECTION **********************/
 
-.dashboard-right-lower-statistics-section .upper {
-  grid-area: upper;
-  border: 1px solid white;
-}
-.dashboard-right-lower-statistics-section .middle {
-  grid-area: middle;
-  border: 1px solid white;
-}
-.dashboard-right-lower-statistics-section .lower {
-  grid-area: lower;
-  border: 1px solid white;
-}
-
 .dashboard-right-lower-statistics-section {
   flex: 8;
-  padding: 0px 20px 20px 20px;
   display: grid;
   grid-template-areas:
-    "upper middle middle"
-    "upper middle middle"
-    "upper lower lower";
+    "itemOne itemTwo itemThree"
+    "itemFour itemFive itemSix"
+    "itemSeven itemEight itemNine";
   grid-gap: 10px;
+  padding: 0px 20px 20px 20px;
+}
+
+.dashboard-right-lower-statistics-section .item-1 {
+  grid-area: itemOne;
+}
+.dashboard-right-lower-statistics-section .item-2 {
+  grid-area: itemTwo;
+}
+.dashboard-right-lower-statistics-section .item-3 {
+  grid-area: itemThree;
+}
+.dashboard-right-lower-statistics-section .item-4 {
+  grid-area: itemFour;
+}
+.dashboard-right-lower-statistics-section .item-5 {
+  grid-area: itemFive;
+}
+.dashboard-right-lower-statistics-section .item-6 {
+  grid-area: itemSix;
+}
+.dashboard-right-lower-statistics-section .item-7 {
+  grid-area: itemSeven;
+}
+.dashboard-right-lower-statistics-section .item-8 {
+  grid-area: itemEight;
+}
+.dashboard-right-lower-statistics-section .item-9 {
+  grid-area: itemNine;
+}
+
+.dashboard-right-lower-statistics-section .showStat {
+  background: #172037;
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.3s ease-in;
+  flex-direction: column;
+}
+
+.dashboard-right-lower-statistics-section .showStat:hover {
+  filter: brightness(1.2);
+}
+
+.dashboard-right-lower-statistics-section .showStat span {
+  position: absolute;
+  bottom: 3px;
+  right: 5px;
 }
 
 /********************** END OF STATISTICS SECTION **********************/
