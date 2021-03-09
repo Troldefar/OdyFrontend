@@ -232,7 +232,7 @@ html {
   color: black;
   transition: all 0.3s ease-in;
   position: relative;
-  background: url('https://w.wallhaven.cc/full/qd/wallhaven-qdog37.png');
+  background: url("https://w.wallhaven.cc/full/qd/wallhaven-qdog37.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -317,7 +317,7 @@ html {
   border-radius: 5px 0 0 5px;
   outline: none;
   color: black;
-  background:rgb(212, 211, 211);
+  background: rgb(212, 211, 211);
   font-size: 1.1rem;
   animation: grow;
   animation-duration: 0.4s;
@@ -337,7 +337,6 @@ html {
 }
 
 .search-output {
-
 }
 
 .user-search-card {
@@ -364,6 +363,34 @@ html {
 }
 
 /********************** END OF SEARCH SECTION **********************/
+
+/********************** START OF STATISTICS SECTION **********************/
+
+.dashboard-right-lower-statistics-section .upper {
+  grid-area: upper;
+  border: 1px solid white;
+}
+.dashboard-right-lower-statistics-section .middle {
+  grid-area: middle;
+  border: 1px solid white;
+}
+.dashboard-right-lower-statistics-section .lower {
+  grid-area: lower;
+  border: 1px solid white;
+}
+
+.dashboard-right-lower-statistics-section {
+  flex: 8;
+  padding: 0px 20px 20px 20px;
+  display: grid;
+  grid-template-areas:
+    "upper middle middle"
+    "upper middle middle"
+    "upper lower lower";
+  grid-gap: 10px;
+}
+
+/********************** END OF STATISTICS SECTION **********************/
 
 .dashboard-right .dashboard-right-lower .grid-item {
   background: #172037;

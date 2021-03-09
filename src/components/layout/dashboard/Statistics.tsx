@@ -12,8 +12,16 @@ export default function Statistics(): JSX.Element {
       </div>
       <div className="dashboard-right">
         <LoggedInMenu />
-        <div className="dashboard-right-lower">
-          Statistics section
+        <div className="dashboard-right-lower-statistics-section">
+          <div className="upper">
+            upper
+          </div>
+          <div className="middle">
+            middle
+          </div>
+          <div className="lower">
+            lower
+          </div>
         </div>
       </div>
     </div>
