@@ -370,11 +370,27 @@ html {
   flex: 8;
   display: grid;
   grid-template-areas:
+    "statMenu statMenu statMenu"
     "itemOne itemTwo itemThree"
     "itemFour itemFive itemSix"
     "itemSeven itemEight itemNine";
   grid-gap: 10px;
   padding: 0px 20px 20px 20px;
+}
+
+.dashboard-right-lower-statistics-section .menu-switch {
+  grid-area: statMenu;
+  background: #172037;
+  background: url("https://w.wallhaven.cc/full/j3/wallhaven-j383yw.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+}
+
+.dashboard-right-lower-statistics-section .menu-switch p {
+  margin: 0px 10px;
+  font-size: 1.5rem;
 }
 
 .dashboard-right-lower-statistics-section .item-1 {

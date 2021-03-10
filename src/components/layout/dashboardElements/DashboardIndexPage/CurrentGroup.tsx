@@ -6,8 +6,8 @@ export default function CurrentGroup() {
       </h2>
       <div className="current-group">
         <span className="mdi mdi-face-agent big-text"></span>
-        <span className="mdi mdi-face-agent big-text"></span>
-        <span className="mdi mdi-face-agent big-text"></span>
+        <span className="mdi mdi-plus big-text"></span>
+        <span className="mdi mdi-plus big-text"></span>
         <span className="mdi mdi-plus big-text"></span>
         <span className="mdi mdi-plus big-text"></span>
       </div>

@@ -16,12 +16,12 @@ export interface SystemState {
 }
 
 export interface RequestHeader {
-  headers: Object
+  headers: object
 }
 
 export interface ReduxAction {
   type: string,
-  payload: Object
+  payload: object
 }
 
 export interface PropsInterface {
