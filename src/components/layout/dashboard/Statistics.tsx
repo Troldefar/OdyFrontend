@@ -10,7 +10,9 @@ export default function Statistics(): JSX.Element {
   const [gameState, setGameState] = useState([]);
   console.log(console.log("GAME STATE: ", gameStatistics[0]?.data));
   const slideLeft = () => {
-    console.log(gameStatistics);
+    gameStatistics[0].data.map((item: any) => {
+      console.log(item.title);
+    })
   }
   const slideRight = () => {
     console.log("right");
