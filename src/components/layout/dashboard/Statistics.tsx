@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import LoggedInMenu from '../menu/LoggedInMenu';
 import Navbar from '../menu/Navbar';
@@ -7,8 +7,10 @@ import StatCard from '../dashboardElements/StatisticsPage/StatCard';
 import { gameStatistics } from '../../utils/ts/constants/gameStatistics';
 
 export default function Statistics(): JSX.Element {
-  const [gameState, setGameState] = useState([]);
-  console.log(console.log("GAME STATE: ", gameStatistics[0]?.data));
+  const [gameState, setGameState] = useState({
+    title: '',
+    data: []
+  });
   const slideLeft = () => {
     gameStatistics[0].data.map((item: any) => {
       console.log(item.title);
@@ -31,12 +33,14 @@ export default function Statistics(): JSX.Element {
           <div className="menu-switch displayFlexAndCenter">
             <span onClick={slideLeft} className="mdi mdi-arrow-left-bold-circle"></span>
             <p>
-              { gameState }
+              {
+                gameStatistics[0].title
+              }
             </p>
             <span onClick={slideRight} className="mdi mdi-arrow-right-bold-circle"></span>
           </div>
           {
-            gameState.map((stat: any) => (
+            gameStatistics[0].data.map((stat: any) => (
               <StatCard
                 key={stat.title}
                 title={stat.title} 
