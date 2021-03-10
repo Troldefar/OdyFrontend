@@ -1,13 +1,16 @@
+import { useState } from 'react';
+
 import LoggedInMenu from '../menu/LoggedInMenu';
 import Navbar from '../menu/Navbar';
-
-import { statistics } from '../../utils/ts/constants/statisticsSubjects';
-
 import StatCard from '../dashboardElements/StatisticsPage/StatCard';
 
+import { gameStatistics } from '../../utils/ts/constants/gameStatistics';
+
 export default function Statistics(): JSX.Element {
+  const [gameState, setGameState] = useState([]);
+  console.log(console.log("GAME STATE: ", gameStatistics[0]?.data));
   const slideLeft = () => {
-    console.log("left");
+    console.log(gameStatistics);
   }
   const slideRight = () => {
     console.log("right");
@@ -26,12 +29,12 @@ export default function Statistics(): JSX.Element {
           <div className="menu-switch displayFlexAndCenter">
             <span onClick={slideLeft} className="mdi mdi-arrow-left-bold-circle"></span>
             <p>
-              CS: GO
+              { gameState }
             </p>
             <span onClick={slideRight} className="mdi mdi-arrow-right-bold-circle"></span>
           </div>
           {
-            statistics.map((stat) => (
+            gameState.map((stat: any) => (
               <StatCard
                 key={stat.title}
                 title={stat.title} 

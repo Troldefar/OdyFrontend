@@ -62,3 +62,8 @@ export interface StatisticsDisplayInterface {
   direction: string;
   customClassName: string;
 }
+
+export interface GameStatistics {
+  title: string;
+  data: any;
+}
