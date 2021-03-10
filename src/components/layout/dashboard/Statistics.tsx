@@ -3,7 +3,7 @@ import Navbar from '../menu/Navbar';
 
 import { statistics } from '../../utils/ts/constants/statisticsSubjects';
 
-import StatCard from '../dashboardElements/DashboardStatPage/StatCard';
+import StatCard from '../dashboardElements/StatisticsPage/StatCard';
 
 export default function Statistics(): JSX.Element {
   const slideLeft = () => {

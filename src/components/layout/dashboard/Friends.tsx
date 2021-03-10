@@ -3,7 +3,7 @@ import Navbar from '../menu/Navbar';
 
 import { users } from '../../utils/ts/constants/users';
 
-import UserCard from '../dashboardElements/DashboardFriendsPage/UserCard';
+import UserCard from '../dashboardElements/FriendsPage/UserCard';
 
 export default function Friends(): JSX.Element {
   return (

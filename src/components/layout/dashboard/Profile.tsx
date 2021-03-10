@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import LoggedInMenu from '../menu/LoggedInMenu';
 import Navbar from '../menu/Navbar';
 
-import ProfileCard from '../dashboardElements/DashboardProfilePage/ProfileCard';
+import ProfileCard from '../dashboardElements/ProfilePage/ProfileCard';
 
 export default function Profile(): JSX.Element {
   const {user}: any = useSelector<any>((state) => state.user);

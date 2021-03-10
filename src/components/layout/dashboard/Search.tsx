@@ -1,8 +1,8 @@
 import LoggedInMenu from '../menu/LoggedInMenu';
 import Navbar from '../menu/Navbar';
 
-import SearchInput from '../dashboardElements/DashboardSearchPage/SearchInput';
-import SearchOutput from '../dashboardElements/DashboardSearchPage/SearchOutput';
+import SearchInput from '../dashboardElements/SearchPage/SearchInput';
+import SearchOutput from '../dashboardElements/SearchPage/SearchOutput';
 
 export default function Search(): JSX.Element {
   return (

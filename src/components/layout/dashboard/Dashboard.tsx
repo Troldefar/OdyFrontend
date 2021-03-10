@@ -1,10 +1,10 @@
 import LoggedInMenu from '../menu/LoggedInMenu';
 import Navbar from '../menu/Navbar';
 
-import NumericView from '../dashboardElements/DashboardIndexPage/NumericView';
-import CanvasView from '../dashboardElements/DashboardIndexPage/CanvasView';
-import GuildView from '../dashboardElements/DashboardIndexPage/QuickSearch';
-import CurrentGroup from '../dashboardElements/DashboardIndexPage/CurrentGroup';
+import NumericView from '../dashboardElements/IndexPage/NumericView';
+import CanvasView from '../dashboardElements/IndexPage/CanvasView';
+import GuildView from '../dashboardElements/IndexPage/QuickSearch';
+import CurrentGroup from '../dashboardElements/IndexPage/CurrentGroup';
 
 export default function Dashboard(): JSX.Element {
   return (

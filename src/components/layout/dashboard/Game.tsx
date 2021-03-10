@@ -3,7 +3,7 @@ import { games } from '../../utils/ts/constants/games';
 import LoggedInMenu from '../menu/LoggedInMenu';
 import Navbar from '../menu/Navbar';
 
-import GameCard from '../../layout/dashboardElements/DashboardGamePage/GameCard';
+import GameCard from '../dashboardElements/GamePage/GameCard';
 
 export default function Game(): JSX.Element {
   return (
