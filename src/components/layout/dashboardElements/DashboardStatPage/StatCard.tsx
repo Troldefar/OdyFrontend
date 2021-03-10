@@ -8,7 +8,7 @@ export default function StatCard({title, text, direction, customClassName}: any)
         { text }
       </p>
       <span className="arrow">
-        <span className={`mdi mdi-arrow-${direction}-circle`}></span>
+        <span className={`mdi mdi-arrow-${direction}-circle ${direction === 'up' ? 'greenColor' : 'crimsonColor'}`}></span>
       </span>
     </div>
   )
