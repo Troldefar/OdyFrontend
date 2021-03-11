@@ -15,12 +15,20 @@ export default function Statistics(): JSX.Element {
   }
   const [gameState, setGameState] = useState(gameStatistics[0]);
   const slideLeft = () => {
-    setGameState(gameStatistics[gameState.index - 1]);
-    setBackground(gameState.background);
+    if(gameStatistics[gameState.index - 1] === undefined) {
+      return
+    } else {
+      setGameState(gameStatistics[gameState.index - 1]);
+      setBackground(gameState.background);
+    }
   }
   const slideRight = () => {
-    setGameState(gameStatistics[gameState.index + 1]);
-    setBackground(gameState.background);
+    if(gameStatistics[gameState.index + 1] === undefined) {
+      return;
+    } else {
+      setGameState(gameStatistics[gameState.index + 1]);
+      setBackground(gameState.background);
+    }
   }
   useEffect(() => {
     setBackground(gameState.background);
