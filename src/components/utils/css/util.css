@@ -197,3 +197,19 @@ select {
 .greenColor {
   color: rgb(89, 168, 89);
 }
+
+/* Modal */
+
+.bell-modal {
+  position: absolute;
+  height: 50vh;
+  width: 100%;
+  background: red;
+  border-radius: 2px;
+  padding: 5px;
+  z-index: 100;
+  animation: fade-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  display: none;
+}

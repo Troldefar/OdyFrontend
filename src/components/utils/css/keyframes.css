@@ -52,3 +52,12 @@
     width: 50%;
   }
 }
+
+@keyframes fade-in {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 50vh;
+  }
+}
