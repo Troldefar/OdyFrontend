@@ -381,7 +381,6 @@ html {
 .dashboard-right-lower-statistics-section .menu-switch {
   grid-area: statMenu;
   background: #172037;
-  background: url("https://w.wallhaven.cc/full/j3/wallhaven-j383yw.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -391,6 +390,8 @@ html {
 .dashboard-right-lower-statistics-section .menu-switch p {
   margin: 0px 10%;
   font-size: 1.5rem;
+  width: 40%;
+  text-align: center;
 }
 
 .dashboard-right-lower-statistics-section .item-1 {

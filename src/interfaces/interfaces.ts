@@ -67,4 +67,5 @@ export interface GameStatistics {
   title: string;
   data: any;
   index: number;
+  background: string;
 }
