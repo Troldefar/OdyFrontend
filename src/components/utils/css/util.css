@@ -206,7 +206,7 @@ select {
   position: absolute;
   height: 50vh;
   width: 200%;
-  background: rgb(66, 62, 62);
+  background: rgb(48, 79, 104);
   border-radius: 2px;
   padding: 5px;
   z-index: 100;
@@ -216,5 +216,4 @@ select {
   display: none;
   box-shadow: 2px 2px 2px black;
   font-size: 0.8rem;
-  text-align: center;
 }

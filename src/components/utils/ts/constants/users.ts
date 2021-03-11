@@ -12,5 +12,7 @@ export const users: UserInterface[] = [
   { name: 'Nick', email: 'test1@test2.dk'},
   { name: 'Daniel', email: 'test1@test2.dk'},
   { name: 'Jonas', email: 'test1@test2.dk'},
-  { name: 'Louise', email: 'test1@test2.dk'}
+  { name: 'Louise', email: 'test1@test2.dk'},
+  { name: 'Den', email: 'test1@test2.dk'},
+  { name: 'Her', email: 'test1@test2.dk'}
 ];

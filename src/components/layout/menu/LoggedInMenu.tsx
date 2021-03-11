@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Modal from '../../el/Modal';
 
@@ -6,6 +6,7 @@ export default function LoggedInMenu(props: any): JSX.Element {
   const [modalOpen, setOpenModal] = useState(false);
   const bellMenu = document.querySelector<HTMLElement>('.bell-modal');
   const openModal = (e: any): void => {
+    console.log(modalOpen);
     if(bellMenu !== null) {
       if(!modalOpen) {
         bellMenu.style.display = "block";
@@ -28,7 +29,7 @@ export default function LoggedInMenu(props: any): JSX.Element {
       <div className="icons">
         <span className="mdi mdi-shield-search mr-2"></span>
         <span onClick={openModal} className="mdi mdi-bell-ring-outline mr-2">
-          <Modal customClassName="bell-modal" data={'You were invited to a game'} />
+          <Modal customClassName="bell-modal" data={'You were invited to a game by: Rasmus'} />
         </span>
         <span className="mdi mdi-cog-outline mr-2"></span>
       </div>

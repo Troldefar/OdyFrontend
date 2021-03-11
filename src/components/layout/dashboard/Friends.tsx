@@ -18,7 +18,7 @@ export default function Friends(): JSX.Element {
         <LoggedInMenu />
         <div className="dashboard-right-lower-friends-section">
           { users.map(user => (
-            <UserCard user={user} />
+            <UserCard key={user.name} user={user} />
           ))}
         </div>
       </div>
