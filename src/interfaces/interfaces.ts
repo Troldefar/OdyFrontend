@@ -66,4 +66,5 @@ export interface StatisticsDisplayInterface {
 export interface GameStatistics {
   title: string;
   data: any;
+  index: number;
 }

@@ -7,15 +7,13 @@ import StatCard from '../dashboardElements/StatisticsPage/StatCard';
 import { gameStatistics } from '../../utils/ts/constants/gameStatistics';
 
 export default function Statistics(): JSX.Element {
-  const [gameState, setGameState] = useState([]);
-  console.log(console.log("GAME STATE: ", gameStatistics[0]?.data));
+  const [gameState, setGameState] = useState(gameStatistics[0]);
+  console.log("GS: ", gameState);
   const slideLeft = () => {
-    gameStatistics[0].data.map((item: any) => {
-      console.log(item.title);
-    })
+    setGameState(gameStatistics[gameState.index - 1]);
   }
   const slideRight = () => {
-    console.log("right");
+    setGameState(gameStatistics[gameState.index + 1]);
   }
   return (
     <div className="dashboard-container">
@@ -31,12 +29,12 @@ export default function Statistics(): JSX.Element {
           <div className="menu-switch displayFlexAndCenter">
             <span onClick={slideLeft} className="mdi mdi-arrow-left-bold-circle"></span>
             <p>
-              { gameState }
+              { gameState.title }
             </p>
             <span onClick={slideRight} className="mdi mdi-arrow-right-bold-circle"></span>
           </div>
           {
-            gameState.map((stat: any) => (
+            gameState.data.map((stat: any) => (
               <StatCard
                 key={stat.title}
                 title={stat.title} 
