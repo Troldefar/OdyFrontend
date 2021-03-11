@@ -1,10 +1,10 @@
-/* href */
+/********************** href **********************/
 
 a {
   text-decoration: none !important;
 }
 
-/* Button */
+/********************** Button **********************/
 
 .btn {
   border-radius: 2px;
@@ -42,7 +42,7 @@ a {
   transition: all 0.3s ease-in;
 }
 
-/* Input */
+/********************** Input **********************/
 
 .input {
   background: none;
@@ -61,7 +61,7 @@ input::placeholder {
   color: white;
 }
 
-/* Alert */
+/********************** Alert **********************/
 
 .alert {
   width: 100%;
@@ -75,7 +75,7 @@ input::placeholder {
   background: rgb(127, 165, 127);
 }
 
-/* MDI */
+/********************** MDI **********************/
 
 .mdi {
   cursor: pointer;
@@ -92,7 +92,7 @@ input::placeholder {
   border: 0.5px solid white;
 }
 
-/* M/P */
+/********************** M/P **********************/
 
 .mt-2 {
   margin-top: 5px;
@@ -117,7 +117,7 @@ input::placeholder {
   font-size: 1.2rem;
 }
 
-/* Standard flex properties */
+/********************** Standard flex properties **********************/
 
 .displayFlexAndCenter {
   display: flex;
@@ -125,7 +125,7 @@ input::placeholder {
   align-items: center;
 }
 
-/* Select */
+/********************** Select **********************/
 
 select {
   -webkit-appearance: none;
@@ -141,13 +141,13 @@ select {
   margin-bottom: 15px;
 }
 
-/* Remove IE arrow */
+/********************** Remove IE arrow **********************/
 
 select::-ms-expand {
   display: none;
 }
 
-/* Custom Select */
+/********************** Custom Select **********************/
 
 .select {
   position: relative;
@@ -167,7 +167,7 @@ select {
   cursor: pointer;
 }
 
-/* Arrow */
+/********************** Arrow **********************/
 
 .select::after {
   content: "\25BC";
@@ -183,12 +183,12 @@ select {
   transition: 0.25s all ease;
 }
 
-/* Transition */
+/********************** Transition **********************/
 .select:hover::after {
   color: #f39c12;
 }
 
-/* Colors */
+/********************** Colors **********************/
 
 .crimsonColor {
   color: crimson;
@@ -198,13 +198,15 @@ select {
   color: rgb(89, 168, 89);
 }
 
-/* Modal */
+/********************** Modal **********************/
 
 .bell-modal {
+  margin-top: 5px;
+  left: -50%;
   position: absolute;
   height: 50vh;
-  width: 100%;
-  background: red;
+  width: 200%;
+  background: rgb(66, 62, 62);
   border-radius: 2px;
   padding: 5px;
   z-index: 100;
@@ -212,4 +214,7 @@ select {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   display: none;
+  box-shadow: 2px 2px 2px black;
+  font-size: 0.8rem;
+  text-align: center;
 }

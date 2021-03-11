@@ -28,7 +28,7 @@ export default function LoggedInMenu(props: any): JSX.Element {
       <div className="icons">
         <span className="mdi mdi-shield-search mr-2"></span>
         <span onClick={openModal} className="mdi mdi-bell-ring-outline mr-2">
-          <Modal customClassName="bell-modal" data={123} />
+          <Modal customClassName="bell-modal" data={'You were invited to a game'} />
         </span>
         <span className="mdi mdi-cog-outline mr-2"></span>
       </div>
