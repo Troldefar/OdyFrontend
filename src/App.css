@@ -227,16 +227,26 @@ html {
 .user-card {
   background: darkgrey;
   flex: 1 0 27%;
-  height: 30%;
+  height: 20%;
   margin: 0px 10px;
   border-radius: 2px;
   color: black;
   transition: all 0.3s ease-in;
   position: relative;
-  background: url("https://w.wallhaven.cc/full/qd/wallhaven-qdog37.png");
+  background: url("https://w.wallhaven.cc/full/nr/wallhaven-nrl8lj.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  color: black;
+}
+
+.user-card .name {
+  color: white;
+  background: black;
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+  border-radius: 2px;
 }
 
 .user-card .invite-user {
