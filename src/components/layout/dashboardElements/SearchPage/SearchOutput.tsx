@@ -22,7 +22,9 @@ export default function SearchOutput() {
     }
   }
   useEffect(() => {
-    searchInput();
+    if(search !== '') {
+      searchInput()
+    }
   }, [search])
   return (
     <div className="search-output">

@@ -5,7 +5,7 @@ import { notEmpty, empty } from '../../../../redux/notification';
 export default function SearchProfileCard({user}: any): JSX.Element {
   const dispatch = useDispatch();
   const sendFriendRequest = (id: number) => {
-    dispatch(notEmpty(`${user.name} was invited`));
+    dispatch(notEmpty(`${user.name} was invited to be your friend`));
     setTimeout(() => {
       dispatch(empty());
     }, 3000);
