@@ -18,6 +18,9 @@ export default function LoggedInMenu(props: any): JSX.Element {
     }
   }
   const date = new Date().toString().substr(3, 22);
+  useEffect(() => {
+    
+  }, [date]);
   return (
     <div className="dashboard-right-upper">
       <h3>
